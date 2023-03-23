@@ -1,0 +1,50 @@
+                  METHOD OVERRIDING
+
+
+
+package org.test;
+
+public class Baby {
+	public void board() {
+		System.out.println("baby getting degree in 20 yrs");
+	}
+
+}
+
+
+
+package org.test;
+
+public class Teen extends Baby {
+	public void board() {
+		System.out.println("teen getting degree in 5 yrs");
+	}
+
+}
+
+
+
+package org.exam;
+import org.test.Baby;
+import org.test.Teen;
+
+public class Adult extends Teen {
+	public void board() {
+		System.out.println("adult getting degree");
+	}
+	public static void main(String[] args) {
+		Adult a = new Adult();
+		Teen t = new Teen();
+		Baby b =new Baby ();
+		a.board();
+		t.board();
+		b.board();
+	}
+
+}
+
+OUTPUT;
+adult getting degree
+teen getting degree in 5 yrs
+baby getting degree in 20 yrs
+
